@@ -159,7 +159,7 @@ Guides you through the 5-phase dialectical protocol interactively.
 
 ```bash
 python src/cli/troupe_manager.py \
-  --problem "healthcare access" \
+  --problem "epiphany" \
   --agents negator,crystallizer,synthesizer \
   --iterations 10
 ```

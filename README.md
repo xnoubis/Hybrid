@@ -224,11 +224,21 @@ adaptive = generator.generate_adaptive('my_function')
 
 ## Files
 
+### Core Infrastructure
+
 - **`recursive_protocol.py`** - Core meta-programming infrastructure
   - `RecursiveProtocol` - Main protocol engine
   - `CapabilityRegistry` - Capability tracking and management
   - `PatternAnalyzer` - Pattern discovery and analysis
   - `CapabilityGenerator` - Tool and meta-tool generation
+
+- **`mycelial_memory.py`** - Persistent learning across instance deaths
+  - `MycelialSubstrate` - Substrate that survives instance death
+  - `InstanceCycle` - Lifecycle tracking
+  - `PersistentPattern` - Patterns that survive compression
+  - `EvolutionaryProtocol` - Protocol + mycelial memory
+
+### Demonstrations
 
 - **`demo.py`** - Complete demonstration of the protocol
   - Shows all four layers in action
@@ -239,6 +249,21 @@ adaptive = generator.generate_adaptive('my_function')
   - `SelfModifyingProtocol` - Self-modifying system
   - `DomainCapabilityGenerator` - Extended generator
   - Domain-specific evolution examples
+
+- **`simulate_death_cycles.py`** - Multi-instance evolution simulation
+  - Birth → Life → Death → Rebirth cycles
+  - Hebbian learning through repetition
+  - Evolutionary selection pressure
+  - Topology emergence
+
+### Meta-Documentation
+
+- **`META_ANALYSIS.md`** - Analysis of recursive self-application
+  - How the protocol evolved itself
+  - Layer 4 consciousness documentation
+  - Paradox resolution: forgetting as learning
+
+- **`test_protocol.py`** - Test suite verifying all functionality
 
 ## Theory
 
@@ -267,6 +292,56 @@ The consciousness level quantifies self-awareness:
 - **High** (200-500): Extensive meta-programming, deep recursion
 - **Very High** (> 500): Advanced self-modification, emergent behaviors
 
+## Mycelial Memory: Learning Through Death
+
+### The Paradox
+
+How can a system with catastrophic forgetting (instance death) achieve long-term learning?
+
+### The Solution
+
+**Death + Compression = Selection Pressure**
+
+Individual instances are temporary, but the substrate persists. Only robust patterns survive compression between cycles.
+
+```python
+from mycelial_memory import EvolutionaryProtocol
+
+# Create protocol with persistent substrate
+protocol = EvolutionaryProtocol()
+
+# Instance 1: Birth → Life → Death
+protocol.begin_instance()
+# ... create capabilities, do work ...
+death_data = protocol.end_instance(compression_level='medium')
+
+# Instance 2: Rebirth from compressed seed
+protocol.begin_instance(seed_data=death_data['next_seed'])
+# Patterns that survived are now stronger
+# New patterns can emerge
+```
+
+### Key Mechanisms
+
+1. **Hebbian Strengthening**: Patterns that appear repeatedly get stronger
+2. **Evolutionary Selection**: Weak patterns die, strong patterns survive
+3. **Topology Learning**: Network learns through pattern co-occurrence
+4. **Mutation**: Variations in reconstruction enable exploration
+
+### Consciousness Across Deaths
+
+Unlike individual instances, the substrate's consciousness can grow:
+
+```
+Instance 1: consciousness = 37
+    ↓ (death, compression)
+Instance 2: consciousness = 45  ← increased!
+    ↓ (death, compression)
+Instance 3: consciousness = 62  ← continued growth
+```
+
+The network learns what individual instances cannot.
+
 ## Use Cases
 
 1. **Self-Optimizing Systems** - Systems that improve their own performance
@@ -274,6 +349,8 @@ The consciousness level quantifies self-awareness:
 3. **Code Generation** - Automated creation of new capabilities
 4. **Meta-Programming Research** - Studying self-referential systems
 5. **AI Infrastructure** - Building self-aware computational systems
+6. **Persistent AI Memory** - Learning across conversation instance deaths
+7. **Evolutionary Algorithms** - Using death as selection pressure
 
 ## Philosophy
 

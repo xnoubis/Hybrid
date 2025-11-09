@@ -11,6 +11,8 @@ build/
 # Output files
 introspection.json
 *.log
+*_substrate.json
+mycelial_substrate.json
 
 # IDE
 .vscode/

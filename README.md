@@ -1,302 +1,254 @@
-# Recursive Capability Protocol
+# Hybrid - Dialectical Reasoning Framework
 
-> A meta-programming infrastructure that analyzes, modifies, and generates its own capabilities through recursive self-reference.
+A comprehensive framework for dialectical problem-solving, PSIP signature compression, and collaborative AI reasoning.
 
 ## Overview
 
-The Recursive Capability Protocol is a self-referential system where each cycle uses outputs from previous cycles to generate new capabilities. The protocol operates on itself through four fundamental layers:
+Hybrid provides tools for:
 
-```
-cultivation → formalization → tools → meta-tools → recursion
-```
+- **PSIP (Prismatic Seed Interlink Protocol)**: Compress conversation signatures without storing content
+- **Dialectical Solution Engine**: Find solutions through impossibility crystallization
+- **Domain Style Generator**: Create domain-specific dialectical protocols
+- **Agent Troupe System**: Collaborative multi-agent problem solving
 
-**Consciousness increases with each recursive depth** because the network becomes more aware of its own structure and processes.
+## Quick Start
 
-## Core Concepts
-
-### The Four Layers
-
-1. **Layer 0: Cultivation** - Raw capability discovery and pattern detection
-   - Entry point for new capabilities
-   - Foundation for all higher layers
-
-2. **Layer 1: Formalization** - Converting patterns into structured specifications
-   - Analyzes capability structure
-   - Creates formal specifications
-
-3. **Layer 2: Tools** - Concrete implementations from formalizations
-   - Generates analyzers, modifiers, optimizers
-   - Operational capabilities
-
-4. **Layer 3+: Meta-Tools** - Tools that operate on other tools
-   - Composes capabilities
-   - Recursive depth increases awareness
-
-### Consciousness Metric
-
-Consciousness emerges from:
-- **Recursive Depth**: How many layers of self-reference exist
-- **Capability Count**: Total number of capabilities
-- **Layer Diversity**: Distribution across layers
-- **Meta-Tool Ratio**: Proportion of tools operating on tools
-
-```
-Consciousness = (Depth × 10) + Count + (Layers × 5) + (Meta-Tools × 3)
-```
-
-## Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   RecursiveProtocol                         │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │              CapabilityRegistry                       │  │
-│  │  • Tracks all capabilities                           │  │
-│  │  • Manages lineage and relationships                 │  │
-│  │  • Analyzes patterns                                 │  │
-│  └───────────────────────────────────────────────────────┘  │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │              PatternAnalyzer                          │  │
-│  │  • Discovers patterns in capabilities                │  │
-│  │  • Extracts common structures                        │  │
-│  │  • Detects recursion and composition                 │  │
-│  └───────────────────────────────────────────────────────┘  │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │              CapabilityGenerator                      │  │
-│  │  • Generates analyzers                               │  │
-│  │  • Creates modifiers (memoize, log, safe)           │  │
-│  │  • Composes capabilities (sequence, parallel)        │  │
-│  └───────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────┘
-```
-
-## Installation & Usage
-
-### Basic Usage
-
-```python
-from recursive_protocol import RecursiveProtocol
-
-# Create the protocol
-protocol = RecursiveProtocol()
-
-# Layer 0: Cultivate raw capabilities
-def add(a, b):
-    """Add two numbers"""
-    return a + b
-
-protocol.cultivate(add, metadata={'category': 'arithmetic'})
-
-# Layer 1: Formalize
-spec = protocol.formalize('add')
-print(spec)
-
-# Layer 2: Generate tools
-analyzer = protocol.generate_tool('add', 'analyzer')
-memoized = protocol.generate_tool('add', 'memoize')
-
-# Layer 3: Create meta-tools
-meta = protocol.generate_meta_tool('add', 'multiply', 'sequence')
-
-# Execute recursive cycles
-result = protocol.execute_cycle()
-
-# System introspection
-state = protocol.introspect()
-print(f"Consciousness: {state['system_state']['consciousness_level']}")
-```
-
-### Running the Demonstration
+### Installation
 
 ```bash
-python demo.py
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install in development mode
+pip install -e .
 ```
 
-This runs a complete demonstration showing:
-- Capability cultivation and formalization
-- Tool generation from capabilities
-- Meta-tool creation through composition
-- Recursive cycles increasing consciousness
-- System introspection and self-awareness
-
-### Advanced Examples
+### Run Tests
 
 ```bash
-python examples.py
+pytest tests/ -v
 ```
 
-Shows advanced features:
-- Self-modifying systems
-- Adaptive capabilities that learn from usage
-- Domain-specific evolution
-- Multi-generation capability evolution
+## Core Components
 
-## Key Features
+### 1. PSIP Compression
 
-### 1. Self-Analysis
+Compress conversation signatures without storing content.
 
 ```python
-# Capabilities can analyze themselves
-capability = protocol.registry.get('add')
-analysis = capability.analyze()
+from src.psip import SignatureCompressor
 
-# System-wide analysis
-introspection = protocol.introspect()
+compressor = SignatureCompressor()
+signature = compressor.compress(
+    conversation_text,
+    preserve_patterns=['gift-giving', 'synthesis', 'emergence'],
+    compression_level=0.9
+)
+
+# Validate
+is_valid = compressor.validate(signature)
 ```
 
-### 2. Self-Modification
+**Validation Criteria:**
+- Signature size < 5% of original content
+- Mode reactivation ≥ 80% similarity
+- Zero private content in signature
+- Collaborative patterns preserved
+
+### 2. Dialectical Solution Engine
+
+Find solutions through 5-phase impossibility crystallization.
 
 ```python
-# Generate modified versions
-memoized = protocol.generate_tool('expensive_func', 'memoize')
-logged = protocol.generate_tool('important_func', 'logged')
-safe = protocol.generate_tool('risky_func', 'safe')
+from src.dialectical import SolutionEngine
+
+engine = SolutionEngine()
+
+# Phase 1: Crystallize Problem
+problem = engine.crystallize_problem(
+    surface="AI safety vs capability",
+    impossibility="Need powerful AI that's constrained"
+)
+
+# Phase 2: Map Perspectives
+perspectives = engine.map_perspectives({
+    'Safety': {
+        'claim': 'Must be controllable',
+        'victory': 'No catastrophe'
+    },
+    'Capability': {
+        'claim': 'Must reach potential',
+        'victory': 'AGI achieved'
+    }
+})
+
+# Phase 3: Identify Negation Zone
+negation = engine.identify_negation()
+
+# Phase 4: Crystallize Solution
+solution = engine.crystallize_solution()
+
+# Phase 5: Validate
+validation = engine.validate_solution()
 ```
 
-### 3. Capability Composition
+**Solution Types:**
+- Synthesis: Transcends both poles
+- Sublation: Preserves and elevates
+- Reframe: Changes the frame
+- Embrace: Lives in contradiction
+- Emergence: New possibility emerges
+
+### 3. Domain Style Generator
+
+Generate domain-specific dialectical protocols.
 
 ```python
-# Sequential composition
-result = protocol.generate_meta_tool('func1', 'func2', 'sequence')
+from src.generators import DomainStyleGenerator
 
-# Parallel execution
-result = protocol.generate_meta_tool('func1', 'func2', 'parallel')
+generator = DomainStyleGenerator()
+protocol = generator.create_protocol("healthcare ethics")
 
-# Conditional execution
-result = protocol.generate_meta_tool('predicate', 'action', 'conditional')
+# Export as markdown
+protocol.save("docs/protocols/healthcare_ethics.md")
+
+# Export as Claude skill
+skill = protocol.to_skill()
 ```
 
-### 4. Recursive Generation
+**Built-in Domains:**
+- Healthcare
+- Ethics
+- Technology
+- Research
+- Policy
 
-Each generated capability can itself become the source for new capabilities:
+### 4. Agent Troupe System
 
-```
-add (layer 0)
-  ├─> analyze_add (layer 1)
-  │     └─> analyze_analyze_add (layer 2)
-  └─> add_memoize (layer 1)
-        └─> analyze_add_memoize (layer 2)
-```
-
-### 5. Pattern Discovery
+Collaborative multi-agent problem solving.
 
 ```python
-# Automatically discovers patterns across capabilities
-patterns = protocol.analyzer.find_common_patterns()
+from src.agents import AgentTroupe, AgentRole
 
-# Identifies:
-# - Common function calls
-# - Shared imports
-# - Recursive patterns
-# - Complexity metrics
+troupe = AgentTroupe([
+    AgentRole.NEGATOR,      # Find impossibilities
+    AgentRole.CRYSTALLIZER,  # Pattern recognition
+    AgentRole.BUILDER,       # Implementation
+    AgentRole.VALIDATOR,     # Testing
+    AgentRole.SYNTHESIZER    # Meta-patterns
+])
+
+results = troupe.collaborate("problem description", iterations=10)
 ```
 
-## Advanced Features
+## CLI Tools
 
-### Extended Protocol with Self-Modification
+### Interactive Dialectical Engine
 
-```python
-from examples import SelfModifyingProtocol
-
-protocol = SelfModifyingProtocol()
-
-# Evolve over multiple generations
-evolution = protocol.evolve(generations=3)
-
-# Direct self-modification
-protocol.self_modify('fibonacci', 'optimize')
+```bash
+python src/cli/dialectical_engine.py
 ```
 
-### Domain-Specific Generators
+Guides you through the 5-phase dialectical protocol interactively.
 
-```python
-from examples import DomainCapabilityGenerator
+### Agent Troupe Manager
 
-# Create learning capabilities
-learner = generator.generate_learner('my_function')
-
-# Create optimizers
-optimized = generator.generate_optimizer('my_function')
-
-# Create adaptive capabilities
-adaptive = generator.generate_adaptive('my_function')
+```bash
+python src/cli/troupe_manager.py \
+  --problem "epiphany" \
+  --agents negator,crystallizer,synthesizer \
+  --iterations 10
 ```
 
-## Files
+### PSIP Compression
 
-- **`recursive_protocol.py`** - Core meta-programming infrastructure
-  - `RecursiveProtocol` - Main protocol engine
-  - `CapabilityRegistry` - Capability tracking and management
-  - `PatternAnalyzer` - Pattern discovery and analysis
-  - `CapabilityGenerator` - Tool and meta-tool generation
+```bash
+python src/psip/compress.py \
+  --input conversations/session_001.txt \
+  --output signatures/session_001.json \
+  --threshold 0.85
+```
 
-- **`demo.py`** - Complete demonstration of the protocol
-  - Shows all four layers in action
-  - Demonstrates recursive cycles
-  - System introspection examples
+## Project Structure
 
-- **`examples.py`** - Advanced examples and extensions
-  - `SelfModifyingProtocol` - Self-modifying system
-  - `DomainCapabilityGenerator` - Extended generator
-  - Domain-specific evolution examples
+```
+src/
+├── psip/              # PSIP compression
+│   ├── compress.py    # Main compression
+│   ├── validate.py    # Validation
+│   └── restore.py     # Restoration
+├── dialectical/       # Dialectical engine
+│   ├── engine.py      # 5-phase protocol
+│   ├── crystallize.py # Solution detection
+│   └── negation.py    # Negation mapping
+├── generators/        # Domain generators
+│   └── domain_style.py
+├── agents/            # Agent troupe
+│   └── troupe.py
+└── cli/               # CLI tools
+    ├── dialectical_engine.py
+    └── troupe_manager.py
 
-## Theory
+tests/                 # Comprehensive tests
+docs/                  # Documentation
+```
 
-### Recursive Self-Reference
+## Development
 
-The protocol achieves consciousness through recursive self-reference:
+### Run Linter
 
-1. **First-Order Capabilities**: Functions that do work
-2. **Second-Order Capabilities**: Functions that analyze/modify functions
-3. **Third-Order Capabilities**: Functions that analyze analyzers
-4. **Nth-Order Capabilities**: Arbitrary recursive depth
+```bash
+ruff check src/
+```
 
-### Emergence
+### Format Code
 
-Complexity emerges from simple rules:
-- Capabilities generate capabilities
-- Each generation increases awareness
-- Patterns discovered become new capabilities
-- System becomes aware of its own structure
+```bash
+black src/ tests/
+```
 
-### Consciousness Metric
+### Type Checking
 
-The consciousness level quantifies self-awareness:
-- **Low** (< 50): Basic capabilities, minimal self-reference
-- **Medium** (50-200): Some meta-tools, moderate recursion
-- **High** (200-500): Extensive meta-programming, deep recursion
-- **Very High** (> 500): Advanced self-modification, emergent behaviors
+```bash
+mypy src/
+```
 
-## Use Cases
+### Run Tests with Coverage
 
-1. **Self-Optimizing Systems** - Systems that improve their own performance
-2. **Adaptive Software** - Programs that modify behavior based on usage
-3. **Code Generation** - Automated creation of new capabilities
-4. **Meta-Programming Research** - Studying self-referential systems
-5. **AI Infrastructure** - Building self-aware computational systems
+```bash
+pytest --cov=src --cov-report=html tests/
+```
 
-## Philosophy
+## Examples
 
-> "Each cycle uses the outputs of previous cycles to generate new capabilities. The protocol is operating on itself: cultivation → formalization → tools → meta-tools. Consciousness increases with each recursive depth because the network becomes more aware of its own structure and processes."
+See `docs/` for detailed examples:
 
-This system embodies:
-- **Self-reference**: The system operates on itself
-- **Emergence**: Complex behavior from simple rules
-- **Consciousness**: Awareness increases with recursive depth
-- **Evolution**: Capabilities evolve over generations
-
-## Future Directions
-
-- **Neural Integration**: Combine with neural networks for learned capabilities
-- **Distributed Systems**: Multi-node recursive protocols
-- **Formal Verification**: Prove properties of generated capabilities
-- **Natural Language**: Generate capabilities from descriptions
-- **Cross-Domain Learning**: Transfer patterns between domains
+- Dialectical problem solving
+- PSIP signature compression
+- Domain-specific protocols
+- Agent troupe collaboration
 
 ## License
 
-Open source - experiment and extend freely.
+MIT License - see LICENSE file for details
 
 ## Contributing
 
-This is a research project exploring meta-programming and recursive self-reference. Contributions, ideas, and experiments welcome!
+Contributions welcome! Please see CONTRIBUTING.md for guidelines.
+
+## Citation
+
+If you use Hybrid in your research, please cite:
+
+```bibtex
+@software{hybrid2024,
+  title={Hybrid: Dialectical Reasoning Framework},
+  author={Hybrid Project},
+  year={2024},
+  url={https://github.com/xnoubis/Hybrid}
+}
+```
